@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script type="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>For U</title>
+
+    <style>
+        body {
+            background-color: lightcoral    ;
+           
+            height: 500px;
+            width: 80%; /* Adjust width for larger screens */
+            margin: 0 auto; /* Center align the container */
+            text-align: center;
+            position: relative; /* Add relative positioning to the body */
+        }
+
+        div.container {
+            width: 100%;
+            height: 100%;
+        }
+
+        div {
+            text-align: center;
+        }
+        img {
+         max-width: 100%;
+        height: auto;
+            }
+
+        p {
+            color: white;
+            padding: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px; /* Adjust font size for smaller screens */
+            margin: 20px;
+        }
+         .button-spacing {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            color: black; /* Change text color to black */
+            background-color: rgb(96, 255, 28);
+            border-radius: 16%;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px 30px;
+            position: absolute;
+            align-items: 0 10px 0 10px; /* Add absolute positioning to the button */
+             padding: 15px 30px;
+        }   
+
+        p1 {
+            font-size: 12px;
+            color: green;
+            background-color: black;
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        /* Media query for screens with a maximum width of 600px (phones) */
+        @media (max-width: 600px) {
+            body {
+                width: 100%;
+                margin: 0;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 14px;
+               
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ost-multi-header">
+    <div class="w3-container w3-center w3-animate-zoom">
+        <div class="wrapper">
+            <div class="container">
+                <p id="question"><span>Crush mo'ko no?</span></p>
+                <div class="d-grid gap-2 d-md-block">
+                    <div class="button-spacing">
+                 <button class="btn btn-primary" type="button" class="btn"  id="Oo" style="margin-top: 40px;"><b>Oo</b></button>
+                <button class="btn btn-primary" type="button" class="btn" id="Hinde"><b>Hinde</b></button>
+                </div>
+                </div>
+
+            </div>
+            <img src="img/peach-goma.gif">
+        </div>
+        <p style="margin-top: 4cm ;font-size: 10px;">create by: fergjune</p>
+    </div>
+
+</div>
+
+<script>
+    const noBtn = document.getElementById('Hinde');
+    const yesBtn = document.getElementById('Oo');
+    const ques = document.getElementById('question');
+    let btn = document.getElementById('btn');
+    let position;
+    noBtn.addEventListener('mouseover', () => {
+        let randX = Math.random() * 80; // Adjust the range for horizontal movement
+        let randY = Math.random() * 60; // Adjust the range for vertical movement
+        noBtn.style.left = randX + '%';
+        noBtn.style.top = randY + '%';
+    });
+    yesBtn.addEventListener("click", () => {
+        ques.innerHTML = "Ikaw Haaaaa HAHAHAHAHA <3"    
+    })
+</script>
+
+</body>
+</html>
